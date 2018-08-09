@@ -15,23 +15,59 @@
             justify-content: space-between;
             flex-direction: column;
             font-family: 'Quicksand', sans-serif;
+            width: 100vw;
         }
         h1 {
-            font-family: 'Shadows Into Light', cursive;
             text-align: center;
             width: 100%;
+        }
+
+        #message {
+            width: 80vw;
+            height: 5vh;
             margin: 0 auto;
         }
 
+        form {
+            margin-top: 50px;
+        }
 
+        form input button {
+            margin: 10px auto;
+        }
+
+        form > input {
+            display: block;
+            width: 300px;
+        }
+
+        form > button {
+            width: 250px;
+            margin: 15px auto;
+            display: block;
+            background: #feca57;
+            color: #fff;
+            font-weight: bold;
+            height: 30px;
+            border: 0px;
+        }
     
     </style>
-    <h1>An anarchaic way to discover (I trust you fellows) great content on youtube</h1>
-    <h2>Open for a great name, please commments in HN thread</h2>
+    <h1>Tubarchy</h1>
+    <h2>An anarchic YT player</h2>
+
+    <div>
+        <h3>Get started now</h3>
+        <p>Simply post a youtube link, with an optional message (255 characters), to broadcast the video to every participants</p>
+    </div>
+
     <hr>
+    <p id="message"></p>
+    <p id="flash"></p>
     
     <form id="form-video">
         <input type="text" id="input-video" placeholder="Paste a youtube link" />
+        <input type="text" id="input-message" placeholder="Optional message" />
         <button id = "update-button" type="submit">Broadcast !</button>
     </form>
     <script src="youtubeManager.js"></script>
